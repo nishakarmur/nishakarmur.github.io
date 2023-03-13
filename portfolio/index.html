@@ -88,6 +88,38 @@
         .header-text h2 span {
             color: #ff004f;
         }
+        /*-------about--------------------------------------------*/
+        
+        #about {
+            padding: 80px 0;
+            color: #ababab;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .about-col-1 {
+            flex-basis: 35%;
+        }
+        
+        .about-col-1 img {
+            margin-bottom: 60px;
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        .about-col-2 {
+            flex-basis: 60%;
+        }
+        
+        .subtitle {
+            font-size: 40px;
+            font-weight: 600;
+            color: #ff004f;
+        }
     </style>
 
 
@@ -103,10 +135,9 @@
 
 
                 <h1> <span>N</span>ISHA...</h1>
-
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Education</a></li>
                     <li><a href="#">Experience</a></li>
                     <li><a href="#">Projects</a></li>
@@ -114,10 +145,27 @@
             </nav>
 
             <div class="header-text">
-                <p> Front end Developer</p>
+                <p> Front-end Developer</p>
                 <h2>Hi, I am <span> Nisha</span> Karmur </h2>
             </div>
 
+        </div>
+    </div>
+    <!---------about------------------------------------------------>
+
+    <div id="about"></div>
+    <div class="container">
+
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/nisha.jpg" alt="" ;>
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle"> About me</h1>
+                <br>
+                <p> An aspiring software developer who has quite an experience with programming language such as HTML, CSS, JavaScript, React.js and PHP with Database management as well as python scripting. Demonstrable ability, translate my experience, knowledge,
+                    and skills into values of the organization. Currently looking for a full time or part time role as a junior software developer.</p>
+            </div>
         </div>
     </div>
 </body>
