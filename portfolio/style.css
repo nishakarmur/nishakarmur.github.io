@@ -238,9 +238,3 @@ nav ul li a:hover {
 
 
 /*---------------------------css for mobile-----------*/
-
-@media only screen and (max-with: 600px) {
-    #header {
-        background-image: url(images/mobile.jpg);
-    }
-}
