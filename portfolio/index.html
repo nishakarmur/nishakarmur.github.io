@@ -6,123 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewpoint" content="width=device-width,initial scale=1.0">
     <title>personal portfolio website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poopins', sans-serif;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: black;
-            color: white;
-        }
-        
-        #header {
-            width: 100%;
-            height: 100vh;
-            background-image: url(images/3.jpg);
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .container {
-            padding: 10px 10%;
-        }
-        
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        nav h1 span {
-            color: #ff004f;
-            font-size: 60px;
-        }
-        
-        nav h1 {
-            font-size: 60px;
-        }
-        
-        nav ul li {
-            display: inline-block;
-            list-style: none;
-            margin: 50px 10px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-        }
-        
-        nav ul li a::after {
-            content: '';
-            width: 0%;
-            height: 3px;
-            background: #ff004f;
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            transition: 0.5s;
-        }
-        
-        nav ul li a:hover {
-            color: #ff004f;
-        }
-        
-        .header-text p {
-            margin-top: 20%;
-            font-size: 30px;
-        }
-        
-        .header-text h2 {
-            font-size: 60px;
-            margin-top: 20px;
-        }
-        
-        .header-text h2 span {
-            color: #ff004f;
-        }
-        /*-------about--------------------------------------------*/
-        
-        #about {
-            padding: 80px 0;
-            color: #ababab;
-        }
-        
-        .row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .about-col-1 {
-            flex-basis: 35%;
-        }
-        
-        .about-col-1 img {
-            margin-bottom: 60px;
-            width: 100%;
-            border-radius: 15px;
-        }
-        
-        .about-col-2 {
-            flex-basis: 60%;
-        }
-        
-        .subtitle {
-            font-size: 40px;
-            font-weight: 600;
-            color: #ff004f;
-        }
-    </style>
-
-
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -138,20 +22,21 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Experience</a></li>
+
                     <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-text">
+
+                <h2>Hi, I am <span> Nisha</span></h2>
                 <p> Front-end Developer</p>
-                <h2>Hi, I am <span> Nisha</span> Karmur </h2>
             </div>
 
         </div>
     </div>
-    <!---------about------------------------------------------------>
+    <!---------         about------------------------------------------------>
 
     <div id="about"></div>
     <div class="container">
@@ -165,9 +50,81 @@
                 <br>
                 <p> An aspiring software developer who has quite an experience with programming language such as HTML, CSS, JavaScript, React.js and PHP with Database management as well as python scripting. Demonstrable ability, translate my experience, knowledge,
                     and skills into values of the organization. Currently looking for a full time or part time role as a junior software developer.</p>
+                <div class="tab-titles ">
+                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                    <p class="tab-links" onclick="opentab('education')"> Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li> <span> Programming Languages</span> <br> HTML, CSS, JavaScript, PHP, Python, C</li>
+                        <li> <span>Frameworks</span><br>React.js , Bootstrap</li>
+                        <li> <span>Database Systems: </span><br> MySQL</li>
+                        <li> <span>Version Control Tools</span><br> Git, GitHub, GitHub Desktop</li>
+                        <li> <span>Operating Systems</span><br> Unix/Linux, Windows</li>
+                        <li> <span>Cloud Services: </span><br> Azure</li>
+                        <li> <span>Others: </span><br> Figma, WordPress, phpMyAdmin, Balsamiq wireframes</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li> <span> Nov-2021 To Current</span> <br> IT Analyst at StarTrack</li>
+                        <li> <span>Jan 2021 To Oct 2021</span><br>Junior Software Developer at Cloud Sloka</li>
+                        <li> <span>May 2018 to Jan 2018</span><br> Web Developer t TYT Studio</li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents education-size" id="education">
+                    <ul>
+                        <li> <span> Masters Of Business Information System</span> <br> Torrens University</li>
+                        <li> <span>Bachelor of Computer Engineering</span><br>LDRP Institute of Technology</li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <!-------------------------Projects--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle"> My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+
+                    <img src="images/work-1.jpg" alt="">
+
+                </div>
+                <div class="work">
+
+                    <img src="images/work-2.jpg" alt="">
+
+                </div>
+                <div class="work">
+
+                    <img src="images/work-3.jpg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 </html>
