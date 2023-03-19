@@ -21,11 +21,11 @@
 
                 <h1> <span>N</span>ISHA...</h1>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
 
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -62,9 +62,7 @@
                         <li> <span>Frameworks</span><br>React.js , Bootstrap</li>
                         <li> <span>Database Systems: </span><br> MySQL</li>
                         <li> <span>Version Control Tools</span><br> Git, GitHub, GitHub Desktop</li>
-                        <li> <span>Operating Systems</span><br> Unix/Linux, Windows</li>
-                        <li> <span>Cloud Services: </span><br> Azure</li>
-                        <li> <span>Others: </span><br> Figma, WordPress, phpMyAdmin, Balsamiq wireframes</li>
+
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
@@ -125,11 +123,11 @@
         </div>
     </div>
     <!---------contact------>
-    <div class="contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-titlt">Contact Me</h1>
+                    <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-sharp fa-solid fa-paper-plane"></i>karmurnisha@gmail.com</p>
                     <p><i class="fa-solid fa-phone-volume"></i>0481011268</p>
                     <div class="social-icons">
@@ -141,13 +139,14 @@
                     <a href="images/Nisha-cv.docx" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn3">Submit</button>
 
                     </form>
+                    <span id="msg"></span>
                 </div>
 
 
@@ -173,6 +172,27 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwjVDnTaRZ-Pyle9m1WRJx1rvphHvD39kH_XAVJdlAH6nwziLCL5nhFhU2z6NmPjI4/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
